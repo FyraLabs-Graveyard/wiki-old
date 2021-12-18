@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" width="698.1825" height="151.5267" id="svg2855">
+  <metadata id="metadata20">
+    
+  </metadata>
+  
+  <defs id="defs2857">
+    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath836">
+      <path d="M 0,48 H 48 V 0 H 0 Z" id="path834"/>
+    </clipPath>
+    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath852">
+      <path d="M 0,48 H 48 V 0 H 0 Z" id="path850"/>
+    </clipPath>
+  </defs>
+  <g id="g828" transform="matrix(0.72349585,0,0,-0.72349585,70.714481,94.460391)">
+    <g id="g830" transform="matrix(4.5390993,0,0,4.5390993,-74.012967,-81.659465)">
+      <g id="g832" clip-path="url(#clipPath836)">
+        <g id="g838" transform="translate(24,42.689)">
+          <path d="m 0,0 c 10.322,0 18.689,-8.367 18.689,-18.689 0,-10.322 -8.367,-18.689 -18.689,-18.689 -10.322,0 -18.689,8.367 -18.689,18.689 C -18.689,-8.367 -10.322,0 0,0" style="fill:#000890;fill-opacity:1;fill-rule:evenodd;stroke:none" id="path840"/>
+        </g>
+        <g id="g842" transform="translate(39.7659,18.0272)">
+          <path d="m 0,0 c -2.783,0.64 -5.504,1.591 -7.364,2.674 -5.09,2.962 -6.851,9.448 -14.032,7.039 5.674,-6.62 -3.843,-8.67 -10.285,-9.305 2.302,-6.581 8.549,-11.309 15.915,-11.309 7.213,0 13.352,4.534 15.766,10.901" style="fill:#fefeff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path844"/>
+        </g>
+      </g>
+    </g>
+  </g>
+  <text xml:space="preserve" style="font-weight:600;font-size:80.4611px;line-height:1.25;font-family:'Montserrat Alternates';-inkscape-font-specification:'Montserrat Alternates Semi-Bold';fill:#000890;fill-opacity:1;stroke-width:2.01152" x="172.28215" y="103.3097" id="text13535" transform="scale(0.97420026,1.026483)"><tspan id="tspan13533" x="172.28215" y="103.3097" style="stroke-width:2.01152">Ultramarine</tspan></text>
+  <rect style="fill:none;stroke-width:4.7811;stroke-linejoin:round;paint-order:stroke markers fill" id="rect145" width="847.09882" height="267.49658" x="-93.40625" y="-56.62373" ry="85.093399"/>
+  <rect style="fill:none;stroke-width:4.7811;stroke-linejoin:round;paint-order:stroke markers fill" id="rect42" width="755.88354" height="203.45145" x="-31.80081" y="-28.124529" ry="85.093399"/>
+  <rect style="fill:none;stroke-width:5.02728;stroke-linejoin:round;paint-order:stroke markers fill" id="rect165" width="698.1825" height="151.5267" x="0" y="0" ry="75.763351"/>
+</svg>
