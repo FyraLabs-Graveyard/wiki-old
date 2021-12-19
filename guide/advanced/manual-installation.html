@@ -2,7 +2,7 @@
 title: Manually Installing Ultramarine
 description: 
 published: true
-date: 2021-12-19T12:28:25.144Z
+date: 2021-12-19T12:29:12.404Z
 tags: advanced, install
 editor: ckeditor
 dateCreated: 2021-12-19T08:22:12.381Z
@@ -77,4 +77,6 @@ sudo mount /dev/sda1 /mnt/sysroot/boot/efi</code></pre>
 <p>To set up the GRUB Bootloader, chroot into the installation and install GRUB.</p>
 <p>To install GRUB on an x86_64 machine, run the following:</p>
 <pre><code class="language-plaintext">dnf install shim grub2-efi-x64 grub2-tools-efi</code></pre>
+<p>Then generate a GRUB config</p>
+<pre><code class="language-plaintext">grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg</code></pre>
 <p>And that's it! You have successfully installed Ultramarine Linux manually. Now you can install additional packages and set up your installation.</p>
