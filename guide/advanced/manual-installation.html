@@ -2,7 +2,7 @@
 title: Manually Installing Ultramarine
 description: 
 published: true
-date: 2021-12-19T10:35:25.797Z
+date: 2021-12-19T11:54:15.708Z
 tags: advanced, install
 editor: ckeditor
 dateCreated: 2021-12-19T08:22:12.381Z
@@ -48,4 +48,26 @@ dateCreated: 2021-12-19T08:22:12.381Z
 </blockquote>
 <p>If you would like to take it to an another step and install Ultramarine manually like an <a href="https://wiki.archlinux.org/title/installation_guide">Arch Linux installation</a>, or want an even more minimal installation for whatever purpose, You can manually bootstrap an entire chroot using DNF.</p>
 <p>To get started, you need to make sure you have DNF installed in your system of choice, be it <a href="https://aur.archlinux.org/packages/dnf/">Arch Linux</a>, <a href="https://packages.debian.org/bullseye/dnf">Debian</a>, or any other OS, including Fedora.</p>
+<p>You need to also need to have Git installed to download the bootstrap script.</p>
+<p>First, set up the partitions using your favorite partitioning tool. For simplicity, we'll be using blivet-gui to edit our partitions.</p>
+<p>If you're using EFI, set up an EFI partition now.</p>
+<hr>
+<p>Create a small EFI partition to store all the EFI bootloader data at the beginning of the disk.</p>
+<figure class="image"><img src="/advanced-setup/image.png"></figure>
+<p>Then, create a main root partition for the system.</p>
+<figure class="image"><img src="/advanced-setup/root.png"></figure>
+<p>Optionally, you can also create a seperate home partition for personal data.</p>
+<p>Once that's done, apply your changes by clicking the checkmark button on the top bar.</p>
+<hr>
+<p>Now the following steps will require you to use the terminal. Please make sure you already have experience using the command line before following this method.</p>
+<p>Create an empty folder at the location of where you would like to mount your system.</p>
+<pre><code class="language-plaintext">sudo mkdir -p /mnt/sysroot</code></pre>
+<p>Mount the partitions you have just created to the folder you have created. You can look at the list of your block devices (partitions) using <code>lsblk</code>.</p>
+<pre><code class="language-plaintext">sudo mount /dev/sda2 /mnt/sysroot</code></pre>
+<p>For EFI users, you have to also mount your EFI partition.</p>
+<pre><code class="language-plaintext">sudo mkdir -p /mnt/sysroot/boot/efi
+sudo mount /dev/sda1 /mnt/sysroot/boot/efi</code></pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <p>&nbsp;</p>
