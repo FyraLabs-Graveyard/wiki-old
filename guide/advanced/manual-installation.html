@@ -2,7 +2,7 @@
 title: Manually Installing Ultramarine
 description: 
 published: true
-date: 2021-12-19T11:54:15.708Z
+date: 2021-12-19T12:17:05.258Z
 tags: advanced, install
 editor: ckeditor
 dateCreated: 2021-12-19T08:22:12.381Z
@@ -51,7 +51,7 @@ dateCreated: 2021-12-19T08:22:12.381Z
 <p>You need to also need to have Git installed to download the bootstrap script.</p>
 <p>First, set up the partitions using your favorite partitioning tool. For simplicity, we'll be using blivet-gui to edit our partitions.</p>
 <p>If you're using EFI, set up an EFI partition now.</p>
-<hr>
+<h3>Partitioning Setup</h3>
 <p>Create a small EFI partition to store all the EFI bootloader data at the beginning of the disk.</p>
 <figure class="image"><img src="/advanced-setup/image.png"></figure>
 <p>Then, create a main root partition for the system.</p>
@@ -67,7 +67,10 @@ dateCreated: 2021-12-19T08:22:12.381Z
 <p>For EFI users, you have to also mount your EFI partition.</p>
 <pre><code class="language-plaintext">sudo mkdir -p /mnt/sysroot/boot/efi
 sudo mount /dev/sda1 /mnt/sysroot/boot/efi</code></pre>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+<h3>Bootstrapping Ultramarine</h3>
+<p>Make sure you have DNF installed before proceeding any further.</p>
+<p>Clone the DNFStrap script from the Ultramarine Gitlab.</p>
+<pre><code class="language-plaintext">git clone https://gitlab.ultramarine-linux.org/extras/dnfstrap.git &amp;&amp; cd dnfstrap</code></pre>
+<p>Now start the bootstrapping process. This command below will install Ultramarine based on Fedora Linux 35 at the specified chroot.</p>
+<pre><code class="language-plaintext">sudo ./dnfstrap 35 /mnt/sysroot</code></pre>
 <p>&nbsp;</p>
