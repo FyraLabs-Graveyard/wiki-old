@@ -2,7 +2,7 @@
 title: Manually Installing Ultramarine
 description: 
 published: true
-date: 2021-12-19T13:02:06.562Z
+date: 2021-12-19T13:08:45.785Z
 tags: advanced, install
 editor: ckeditor
 dateCreated: 2021-12-19T08:22:12.381Z
@@ -74,6 +74,10 @@ sudo mount /dev/sda1 /mnt/sysroot/boot/efi</code></pre>
 <p>Now start the bootstrapping process. This command below will install Ultramarine based on Fedora Linux 35 at the specified chroot.</p>
 <pre><code class="language-plaintext">sudo ./dnfstrap 35 /mnt/sysroot</code></pre>
 <p>We assume you already have knowledge on how to generate a file system table, so please set up your /etc/fstab after bootstrapping your installation.</p>
+<p><strong>Example File System Table in a virtual machine:</strong></p>
+<pre><code class="language-plaintext">/dev/vda2       /               ext4    defaults        0 0
+/dev/vda1       /boot/efi       vfat    umask=0077,shortname=winnt 0 2</code></pre>
+<p>It is recommended you change the direct device paths to the partition's UUID instead.</p>
 <h3>Setting up the bootloader</h3>
 <p>To set up the GRUB Bootloader, chroot into the installation and install GRUB.</p>
 <p>To install GRUB on an x86_64 machine, run the following:</p>
