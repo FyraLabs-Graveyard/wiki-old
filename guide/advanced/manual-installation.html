@@ -1,0 +1,24 @@
+<!--
+title: Manually Installing Ultramarine
+description: 
+published: true
+date: 2021-12-19T08:22:12.381Z
+tags: advanced, install
+editor: ckeditor
+dateCreated: 2021-12-19T08:22:12.381Z
+-->
+
+<h1>Manually installing Ultramarine Linux</h1>
+<p>If you'd like a more custom install of Ultramarine, you can pick 3 different ways to make your own installation of Ultramarine Linux</p>
+<h2>Using the Network Installer</h2>
+<p>The network installer, also internally called the “Everything” variant, is a bootable installer ISO file containing the plain install tree for Ultramarine Linux.</p>
+<p>It also serves as the main software repository for all software in Ultramarine Linux, and is configured to override all software that already existed in Fedora.</p>
+<p>To use the network installer, download the bootable ISO image and flash it to a flash drive or burn it to a disc following the <a href="/guide/installation">Standard installation guide</a>.</p>
+<h3>Installing without the Ultramarine Network installer</h3>
+<p>You can also use the Fedora Everything installer, the Fedora Server installer, RHEL installer, Rocky Linux installer, or an installer for any Linux distribution that uses the <a href="https://en.wikipedia.org/wiki/Anaconda_(installer)">Anaconda Installer</a>.</p>
+<p>To do this, simply use said installer and then point the installation source to the Ultramarine repositories. You should also set up additional repositories for Fedora itself and RPMFusion, as Ultramarine in itself is not self-hosting at the moment.</p>
+<h2>Building your own image</h2>
+<p>To build your own custom image of Ultramarine, you can use the standard <a href="https://gitlab.ultramarine-linux.org/release-engineering/build-scripts">Kickstart scripts</a> as a starting point. Kickstart is a scripting language for the Anaconda installer that allows for custom unattended installations using the Anaconda installer. It can also be scripted in a way to be used to create a custom image.</p>
+<p>To get started, please refer to the <a href="https://pykickstart.readthedocs.io/en/latest/kickstart-docs.html">PyKickstart Documentation</a>.</p>
+<p>To build an image, clone the kickstart files from the Ultramarine GitLab</p>
+<pre><code class="language-plaintext">git clone https://gitlab.ultramarine-linux.org/release-engineering/build-scripts.git &amp;&amp; cd build-scripts</code></pre>
