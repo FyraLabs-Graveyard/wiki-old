@@ -2,7 +2,7 @@
 title: Manually Installing Ultramarine
 description: 
 published: true
-date: 2021-12-19T13:08:45.785Z
+date: 2021-12-19T13:33:07.835Z
 tags: advanced, install
 editor: ckeditor
 dateCreated: 2021-12-19T08:22:12.381Z
@@ -78,6 +78,10 @@ sudo mount /dev/sda1 /mnt/sysroot/boot/efi</code></pre>
 <pre><code class="language-plaintext">/dev/vda2       /               ext4    defaults        0 0
 /dev/vda1       /boot/efi       vfat    umask=0077,shortname=winnt 0 2</code></pre>
 <p>It is recommended you change the direct device paths to the partition's UUID instead.</p>
+<h3>Installing the Linux kernel</h3>
+<p>Due to the way that Fedora works, you need to install the kernel with, or after the bootloader has been installed.</p>
+<p>Simply install the kernel in the chroot by running:</p>
+<pre><code class="language-plaintext">dnf install kernel</code></pre>
 <h3>Setting up the bootloader</h3>
 <p>To set up the GRUB Bootloader, chroot into the installation and install GRUB.</p>
 <p>To install GRUB on an x86_64 machine, run the following:</p>
@@ -92,11 +96,18 @@ set prefix=($dev)/boot/grub2
 export $prefix
 configfile $prefix/grub.cfg</code></pre>
 <p>Replace the <code>&lt;UUID&gt;</code> part with the UUID of your root partition.</p>
+<p>Do the same for the boot entries in <code>/boot/loader/entries/</code> after you installed the kernel.</p>
+<p>Example configuration for a GRUB entry:</p>
+<hr>
+<pre><code class="language-plaintext">title Ultramarine Linux (5.15.6-200.fc35.x86_64)
+version 5.15.6-200.fc35.x86_64
+linux /boot/vmlinuz-5.15.6-200.fc35.x86_64
+initrd /boot/initramfs-5.15.6-200.fc35.x86_64.img
+options root=UUID=&lt;UUID&gt; ro rhgb quiet
+grub_users $grub_users
+grub_arg --unrestricted
+grub_class ultramarine</code></pre>
 <p>Then generate a GRUB config</p>
 <pre><code class="language-plaintext">grub2-mkconfig -o /etc/grub2.cfg
 grub2-mkconfig -o /etc/grub2-efi.cfg</code></pre>
-<h3>Installing the Linux kernel</h3>
-<p>Due to the way that Fedora works, you need to install the kernel with, or after the bootloader has been installed.</p>
-<p>Simply install the kernel in the chroot by running:</p>
-<pre><code class="language-plaintext">dnf install kernel</code></pre>
 <p>And that's it! You have successfully installed Ultramarine Linux manually. Now you can install additional packages and set up your installation.</p>
