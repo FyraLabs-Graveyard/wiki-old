@@ -2,7 +2,7 @@
 title: Manually Installing Ultramarine
 description: 
 published: true
-date: 2021-12-19T12:47:14.013Z
+date: 2021-12-19T13:02:06.562Z
 tags: advanced, install
 editor: ckeditor
 dateCreated: 2021-12-19T08:22:12.381Z
@@ -91,4 +91,8 @@ configfile $prefix/grub.cfg</code></pre>
 <p>Then generate a GRUB config</p>
 <pre><code class="language-plaintext">grub2-mkconfig -o /etc/grub2.cfg
 grub2-mkconfig -o /etc/grub2-efi.cfg</code></pre>
+<h3>Installing the Linux kernel</h3>
+<p>Due to the way that Fedora works, you need to install the kernel with, or after the bootloader has been installed.</p>
+<p>Simply install the kernel in the chroot by running:</p>
+<pre><code class="language-plaintext">dnf install kernel</code></pre>
 <p>And that's it! You have successfully installed Ultramarine Linux manually. Now you can install additional packages and set up your installation.</p>
