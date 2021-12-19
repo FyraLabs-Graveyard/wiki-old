@@ -2,7 +2,7 @@
 title: Manually Installing Ultramarine
 description: 
 published: true
-date: 2021-12-19T08:22:12.381Z
+date: 2021-12-19T10:32:48.477Z
 tags: advanced, install
 editor: ckeditor
 dateCreated: 2021-12-19T08:22:12.381Z
@@ -21,4 +21,31 @@ dateCreated: 2021-12-19T08:22:12.381Z
 <p>To build your own custom image of Ultramarine, you can use the standard <a href="https://gitlab.ultramarine-linux.org/release-engineering/build-scripts">Kickstart scripts</a> as a starting point. Kickstart is a scripting language for the Anaconda installer that allows for custom unattended installations using the Anaconda installer. It can also be scripted in a way to be used to create a custom image.</p>
 <p>To get started, please refer to the <a href="https://pykickstart.readthedocs.io/en/latest/kickstart-docs.html">PyKickstart Documentation</a>.</p>
 <p>To build an image, clone the kickstart files from the Ultramarine GitLab</p>
-<pre><code class="language-plaintext">git clone https://gitlab.ultramarine-linux.org/release-engineering/build-scripts.git &amp;&amp; cd build-scripts</code></pre>
+<pre><code class="language-plaintext">git clone https://gitlab.ultramarine-linux.org/release-engineering/build-scripts.git</code></pre>
+<p>Then, edit the files as you see fit. After that you can either go 2 ways:</p>
+<h3>Using Onceler to build the image</h3>
+<p>Onceler is a simple wrapper for Lorax that can be used to quickly build live images from kickstart files.&nbsp;</p>
+<p>To use it, simply edit the given <code>onceler.cfg</code> file, then run Onceler</p>
+<pre><code class="language-plaintext">sudo onceler --variant &lt;variant&gt;</code></pre>
+<h3>Using the standard Live Media Creator</h3>
+<p>After you have finished configuring your kickstart configuration, flatten your kickstart files to a single file.</p>
+<pre><code class="language-plaintext">ksflatten -c &lt;input.ks&gt; -o &lt;output.ks&gt;</code></pre>
+<p>Then, use the Live Media Creator to build the image.</p>
+<p><strong>Example Command:</strong></p>
+<hr>
+<pre><code class="language-plaintext">sudo livemedia-creator --make-iso\
+ --ks ultramarine-pantheon-flattened.ks\
+ --project "Ultramarine-Pantheon-Live"\
+ --releasever 35\
+ --no-virt\
+ --macboot\
+ --iso-only\
+ --resultdir result/</code></pre>
+<p>For more instructions on how to use the Live Media Creator, please refer to the <a href="https://weldr.io/lorax/lorax.html">Lorax Documentation</a>.</p>
+<h2>Manually bootstrapping Ultramarine using DNF</h2>
+<blockquote>
+  <p><mark class="marker-yellow">WARNING</mark>: This method is only recommended for advanced users only. We are not responsible for broken installations, lost data, and broken components when using this method. You have been warned.</p>
+</blockquote>
+<p>If you would like to take it to an another step and install Ultramarine manually like an <a href="https://wiki.archlinux.org/title/installation_guide">Arch Linux installation</a>, or want an even more minimal installation for whatever purpose, You can manually bootstrap an entire chroot using DNF. This method also works and will assume you want to install vanilla Fedora by default unless specified otherwise or are installing on a live Ultramarine installation.</p>
+<p>To get started, you need to make sure you have DNF installed in your system of choice, be it <a href="https://aur.archlinux.org/packages/dnf/">Arch Linux</a>, <a href="https://packages.debian.org/bullseye/dnf">Debian</a>, or any other OS, including Fedora.</p>
+<p>&nbsp;</p>
