@@ -2,7 +2,7 @@
 title: Manually Installing Ultramarine
 description: 
 published: true
-date: 2021-12-19T12:29:12.404Z
+date: 2021-12-19T12:45:28.469Z
 tags: advanced, install
 editor: ckeditor
 dateCreated: 2021-12-19T08:22:12.381Z
@@ -77,6 +77,17 @@ sudo mount /dev/sda1 /mnt/sysroot/boot/efi</code></pre>
 <p>To set up the GRUB Bootloader, chroot into the installation and install GRUB.</p>
 <p>To install GRUB on an x86_64 machine, run the following:</p>
 <pre><code class="language-plaintext">dnf install shim grub2-efi-x64 grub2-tools-efi</code></pre>
+<p>Then check the UUIDs of your partitions using <code>blkid</code></p>
+<pre><code class="language-plaintext">blkid</code></pre>
+<p>Get the UUID of your root partition, then make a GRUB config file at <code>/boot/efi/EFI/fedora/grub.cfg</code></p>
+<p>Make sure the contents are like this:</p>
+<pre><code class="language-plaintext">search --no-floppy --fs-uuid --set=dev &lt;UUID&gt;
+set prefix=($dev)/boot/grub2
+
+export $prefix
+configfile $prefix/grub.cfg</code></pre>
+<p>Replace the <code>&lt;UUID&gt;</code> part with the UUID of your root partition.</p>
 <p>Then generate a GRUB config</p>
-<pre><code class="language-plaintext">grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg</code></pre>
+<pre><code class="language-plaintext">grub2-mkconfig -o /etc/grub2.cfg
+grub2-mkconfig -o /etc/grub2-efi.cfg</code></pre>
 <p>And that's it! You have successfully installed Ultramarine Linux manually. Now you can install additional packages and set up your installation.</p>
