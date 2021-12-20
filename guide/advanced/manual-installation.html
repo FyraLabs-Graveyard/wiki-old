@@ -2,7 +2,7 @@
 title: Manually Installing Ultramarine
 description: 
 published: true
-date: 2021-12-19T13:38:29.837Z
+date: 2021-12-20T04:11:44.266Z
 tags: advanced, install
 editor: ckeditor
 dateCreated: 2021-12-19T08:22:12.381Z
@@ -51,6 +51,9 @@ dateCreated: 2021-12-19T08:22:12.381Z
 <p>You need to also need to have Git installed to download the bootstrap script.</p>
 <p>First, set up the partitions using your favorite partitioning tool. For simplicity, we'll be using blivet-gui to edit our partitions.</p>
 <p>If you're using EFI, set up an EFI partition now.</p>
+<p>If you're sure you'll be wiping the entire disk and using a singular root partition, you can skip this part and use DNFStrap's built in auto partitioning and setup by cloning the repository and running:</p>
+<pre><code class="language-plaintext">git clone https://gitlab.ultramarine-linux.org/extras/dnfstrap.git &amp;&amp; cd dnfstrap &amp;&amp; sudo ./dnfstrap -r 35 -d /dev/sda</code></pre>
+<p>This will install Ultramarine with a F35 base and automatically format your disk with an EFI partition.</p>
 <h3>Partitioning Setup</h3>
 <p>Create a small EFI partition to store all the EFI bootloader data at the beginning of the disk.</p>
 <figure class="image"><img src="/advanced-setup/efi.png"></figure>
