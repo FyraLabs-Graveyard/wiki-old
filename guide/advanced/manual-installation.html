@@ -2,7 +2,7 @@
 title: Manually Installing Ultramarine
 description: 
 published: true
-date: 2021-12-20T04:17:20.448Z
+date: 2021-12-20T07:09:35.493Z
 tags: advanced, install
 editor: ckeditor
 dateCreated: 2021-12-19T08:22:12.381Z
@@ -42,17 +42,17 @@ dateCreated: 2021-12-19T08:22:12.381Z
  --iso-only\
  --resultdir result/</code></pre>
 <p>For more instructions on how to use the Live Media Creator, please refer to the <a href="https://weldr.io/lorax/lorax.html">Lorax Documentation</a>.</p>
-<h2>Manually bootstrapping Ultramarine using DNF</h2>
+<h2>Manually bootstrapping Ultramarine using DNFStrap</h2>
 <blockquote>
   <p><mark class="marker-yellow">WARNING</mark>: This method is only recommended for advanced users only. We are not responsible for broken installations, lost data, and broken components when using this method. You have been warned.</p>
 </blockquote>
-<p>If you would like to take it to an another step and install Ultramarine manually like an <a href="https://wiki.archlinux.org/title/installation_guide">Arch Linux installation</a>, or want an even more minimal installation for whatever purpose, You can manually bootstrap an entire chroot using DNF.</p>
+<p>If you would like to take it to an another step and install Ultramarine manually like an <a href="https://wiki.archlinux.org/title/installation_guide">Arch Linux installation</a>, or want an even more minimal installation for whatever purpose, You can manually install Ultramarine using DNFStrap.</p>
 <p>To get started, you need to make sure you have DNF installed in your system of choice, be it <a href="https://aur.archlinux.org/packages/dnf/">Arch Linux</a>, <a href="https://packages.debian.org/bullseye/dnf">Debian</a>, or any other OS, including Fedora.</p>
 <p>You need to also need to have Git installed to download the bootstrap script.</p>
 <p>First, set up the partitions using your favorite partitioning tool. For simplicity, we'll be using blivet-gui to edit our partitions.</p>
 <p>If you're using EFI, set up an EFI partition now.</p>
 <p>If you're sure you'll be wiping the entire disk and using a singular root partition, you can skip this part and use DNFStrap's built in auto partitioning and setup by cloning the repository and running:</p>
-<pre><code class="language-plaintext">git clone https://gitlab.ultramarine-linux.org/extras/dnfstrap.git &amp;&amp; cd dnfstrap &amp;&amp; sudo ./dnfstrap -r 35 -d /dev/sda</code></pre>
+<pre><code class="language-plaintext">git clone https://gitlab.ultramarine-linux.org/extras/dnfstrap.git &amp;&amp; cd dnfstrap &amp;&amp; sudo ./dnfstrap -r 35 -d /dev/sda -i ultramarine-release-basic -i -fedora-release*</code></pre>
 <p>This will install Ultramarine with a F35 base and automatically format your disk with an EFI partition.</p>
 <p>If you want a custom configuration, you'll have to continue with the instructions below.</p>
 <h3>Partitioning Setup</h3>
@@ -76,15 +76,16 @@ sudo mount /dev/sda1 /mnt/sysroot/boot/efi</code></pre>
 <p>Clone the DNFStrap script from the Ultramarine Gitlab.</p>
 <pre><code class="language-plaintext">git clone https://gitlab.ultramarine-linux.org/extras/dnfstrap.git &amp;&amp; cd dnfstrap</code></pre>
 <p>Now start the bootstrapping process. This command below will install Ultramarine based on Fedora Linux 35 at the specified chroot.</p>
-<pre><code class="language-plaintext">sudo ./dnfstrap 35 /mnt/sysroot</code></pre>
+<pre><code class="language-plaintext">sudo ./dnfstrap -r 35 -c /mnt/sysroot -i ultramarine-release-basic -i -fedora-release*</code></pre>
 <p>We assume you already have knowledge on how to generate a file system table, so please set up your /etc/fstab after bootstrapping your installation.</p>
 <p><strong>Example File System Table in a virtual machine:</strong></p>
 <pre><code class="language-plaintext">/dev/vda2       /               ext4    defaults        0 0
 /dev/vda1       /boot/efi       vfat    umask=0077,shortname=winnt 0 2</code></pre>
 <p>It is recommended you change the direct device paths to the partition's UUID instead.</p>
 <h3>Installing the Linux kernel</h3>
-<p>Due to the way that Fedora works, you need to install the kernel with, or after the bootloader has been installed.</p>
-<p>Simply install the kernel in the chroot by running:</p>
+<p>Due to the way that Fedora/Ultramarine works, you need to install the kernel with, or after the bootloader has been installed.</p>
+<p>DNFStrap will ask you which kernel to install automatically.</p>
+<p>But however, if you have a custom boot configuration, simply install the vanilla kernel by running this in the chroot:</p>
 <pre><code class="language-plaintext">dnf install kernel</code></pre>
 <h3>Setting up the bootloader</h3>
 <p>To set up the GRUB Bootloader, chroot into the installation and install GRUB.</p>
@@ -100,18 +101,16 @@ set prefix=($dev)/boot/grub2
 export $prefix
 configfile $prefix/grub.cfg</code></pre>
 <p>Replace the <code>&lt;UUID&gt;</code> part with the UUID of your root partition.</p>
-<p>Do the same for the boot entries in <code>/boot/loader/entries/</code> after you installed the kernel.</p>
-<p>Example configuration for a GRUB entry:</p>
-<hr>
-<pre><code class="language-plaintext">title Ultramarine Linux (5.15.6-200.fc35.x86_64)
-version 5.15.6-200.fc35.x86_64
-linux /boot/vmlinuz-5.15.6-200.fc35.x86_64
-initrd /boot/initramfs-5.15.6-200.fc35.x86_64.img
-options root=UUID=&lt;UUID&gt; ro rhgb quiet
-grub_users $grub_users
-grub_arg --unrestricted
-grub_class ultramarine</code></pre>
+<p>Do the same for the boot entries after you installed the kernel.</p>
+<p>You can do this by removing the root entry in your GRUB configuration, then adding it again with the correct UUID using <code>grubby</code>.</p>
+<pre><code class="language-plaintext">rootdisk=$(df -P / | sed -n '$s/[[:blank:]].*//p')
+grubby --remove-args="root" --update-kernel ALL
+grubby --remove-args='rd.live.image' --update-kernel ALL
+grubby --args "root=UUID=$(blkid -o value -s UUID $rootdisk) rw quiet" --update-kernel ALL</code></pre>
 <p>Then generate a GRUB config</p>
 <pre><code class="language-plaintext">grub2-mkconfig -o /etc/grub2.cfg
 grub2-mkconfig -o /etc/grub2-efi.cfg</code></pre>
 <p>And that's it! You have successfully installed Ultramarine Linux manually. Now you can install additional packages and set up your installation.</p>
+<h3>Notes for post-installation</h3>
+<p>Please set up your SELinux settings, or disable it to be able to actually use the system. Graphical logins may fail when installing a DE and you should try <code>chown</code>ing your home directory and setting your SELinux contexts if this were to happen.</p>
+<p>You can set the contexts by using <code>restorecon -R /path/to/folder/</code></p>
