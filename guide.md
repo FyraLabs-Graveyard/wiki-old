@@ -2,7 +2,7 @@
 title: Guide
 description: 
 published: true
-date: 2021-12-21T18:43:09.164Z
+date: 2021-12-21T18:44:56.099Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-17T16:14:46.992Z
@@ -101,7 +101,7 @@ A package manager by default queries your distribution's repositories to install
 This library of programs can be further expanded by adding additional repositories
 There are various ways software can be distributed on Linux, however, the various methods to install a software 
 
-> Ultramarine Linux' package manager is `dnf`
+> Ultramarine Linux's default package manager is [DNF](https://en.wikipedia.org/wiki/DNF_(software)).
 {.is-info}
 
 
