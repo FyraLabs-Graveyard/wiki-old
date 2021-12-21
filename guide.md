@@ -2,7 +2,7 @@
 title: Guide
 description: 
 published: true
-date: 2021-12-21T13:06:45.389Z
+date: 2021-12-21T18:43:09.164Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-17T16:14:46.992Z
@@ -78,7 +78,7 @@ Binaries, however, are ready-to-use and pre-compiled, meaning you can simply exe
 
 This is analogous to running a `.exe` file for Windows or a `.dmg` file for OS X.
 
-> Ultramarine Linux is a RPM-Based distribution, meaning you can run`.rpm` files. Generally, everything based on Debian (or rather Ubuntu) is Deb-Based, meaning they run `.deb` programs. Do not run `.deb` packages in Ultramarine Linux.
+> Ultramarine Linux is a RPM(Red Hat)-Based distribution, meaning you can load `.rpm` files. Generally, everything based on Debian (or rather Ubuntu) Uses the Debian Package Manager, meaning they use `.deb` packages to install programs. Do not run `.deb` packages in Ultramarine Linux.
 {.is-info}
 
 
@@ -89,6 +89,8 @@ The most common way to install programs on Linux is by using your **package mana
 ### Package Managers
 
 The package manager, as the name suggests, manages the packages installed on your system. These often include dependencies, weak dependencies and the program itself.
+
+Examples of other non-Linux package managers include Windows' modern (Windows 8+) apps, iOS apps, Android's APK, the Python Package Index, and Homebrew for macOS.
 
 > Dependencies are the programs required by the software in order to function properly, these are generally installed when you are installing a package.
 {.is-info}
