@@ -2,7 +2,7 @@
 title: Guide
 description: 
 published: true
-date: 2021-12-21T18:44:56.099Z
+date: 2021-12-21T18:45:43.359Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-17T16:14:46.992Z
@@ -107,7 +107,7 @@ There are various ways software can be distributed on Linux, however, the variou
 
 ### Various Ways To Install An Executable In Linux
 
-Linux comes with a plethora of ways to install an executable
+Linux comes with a plethora of ways to install an executable.
 
 Broadly speaking, they can be either "contained", or use your system's pre-installed dependencies.
 
