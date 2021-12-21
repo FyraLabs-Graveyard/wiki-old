@@ -2,7 +2,7 @@
 title: Guide
 description: 
 published: true
-date: 2021-12-21T18:45:43.359Z
+date: 2021-12-21T18:47:30.304Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-17T16:14:46.992Z
@@ -134,7 +134,7 @@ These programs do follow your system's theme integration and related customizati
 
 >AppImages are a format for distributing portable software on linux without needing superuser permissions to install the application. Source: Wikipedia
 
-> Super User, aka Sudo privileges, aka Root are the highest order of access a program can have access to. This is analogous to Adminstrator privileges on Windows and root user on OS X
+> Superuser, `sudo` previliges, or Root privilieges are the highest order of access a program can have access to. This is analogous to Adminstrator privileges on Windows, this also applies on other UNIX-based Operating systems such as macOS.
 {.is-info}
 
 
