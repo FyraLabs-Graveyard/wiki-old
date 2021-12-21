@@ -2,7 +2,7 @@
 title: Guide
 description: 
 published: true
-date: 2021-12-21T12:34:45.077Z
+date: 2021-12-21T12:55:38.758Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-17T16:14:46.992Z
@@ -109,6 +109,20 @@ Linux comes with a plethora of ways to install an executable
 
 Broadly speaking, they can be either "contained", or use your system's pre-installed dependencies.
 
-#### 
+In our case, the latter one is in the form of `.rpm` files.
+
+#### RPMs
+
+RPM Stands originally stood for Redhat Package Manager, however, it is now used as a recurse acronym.
+
+This is generally what is in the main repositories of a linux distribution.
+
+These programs rely on your system's pre-installed dependencies.
+
+Experience using these executables is highly customizable and generally can be tuned to your heart's content
+
+> In order to actually modify the code, you will be needed SRPMs (abbreviated as Source RPMs), these will not be discussed in this guide as it lies out of scope of this wiki.
+{.is-info}
+
 
 
