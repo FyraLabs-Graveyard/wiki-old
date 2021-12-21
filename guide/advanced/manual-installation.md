@@ -2,7 +2,7 @@
 title: Manually Installing Ultramarine
 description: 
 published: true
-date: 2021-12-21T19:16:12.321Z
+date: 2021-12-21T19:16:56.147Z
 tags: advanced, install
 editor: markdown
 dateCreated: 2021-12-19T08:22:12.381Z
@@ -80,6 +80,7 @@ For more instructions on how to use the Live Media Creator, please refer to the 
 ## Manually bootstrapping Ultramarine using DNFStrap
 
 > WARNING: This method is only recommended for advanced users only. We are not responsible for broken installations, lost data, and broken components when using this method. You have been warned.
+{.is-warning}
 
 If you would like to take it to an another step and install Ultramarine manually like an [Arch Linux installation](https://wiki.archlinux.org/title/installation_guide), or want an even more minimal installation for whatever purpose, You can manually install Ultramarine using DNFStrap.
 
