@@ -2,7 +2,7 @@
 title: Guide
 description: 
 published: true
-date: 2021-12-17T16:23:40.410Z
+date: 2021-12-21T12:27:03.962Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-17T16:14:46.992Z
@@ -54,3 +54,45 @@ As with most things in Linux (and Open Source in general), there are politics in
 
 ***READ MORE HERE:***
 1. [Arch Linux Wiki](https://wiki.archlinux.org/index.php/Desktop_environment)
+
+## How Do I Install A Program? What Is A Package Manager? What are "Software Repositories"?
+There are various ways of installing a program on Linux.
+
+Broadly speaking, software can be installed in 2 ways- by installing "Binaries" or "Compiling from Source"
+
+### Compiling from source
+
+When you compile from source, you essentially take the various instructions involved (which may include but not limited to scripts, configuration files, etc) and "Build" your program using the various "blueprints" and "schematics" provided. Think of it as building your own PC, car, etc from scratch.
+
+A few of the most common builders include `meson`, `ninja`, `cmake`, etc
+
+Generally, this method is used if an executable is not provided by the developer, or if you have applied some custom changes to the software which is otherwise not available to download directly. 
+
+> TL;DR: This is generally for advanced users.
+{.is-info}
+
+
+### Binaries
+
+Binaries, however, are ready-to-use and pre-compiled, meaning you can simply execute them with a command or a click.
+
+This is analogous to running a `.exe` file for Windows or a `.dmg` file for OS X.
+
+Various ways to install a specific program are discussed further below.
+
+The most common way to install programs on Linux is by using your **package manager**.
+
+### Package Managers
+
+The package manager, as the name suggests, manages the packages installed on your system. These often include dependencies, weak dependencies and the program itself.
+
+> Dependencies are the programs required by the software in order to function properly, these are generally installed when you are installing a package.
+{.is-info}
+
+
+A package manager by default queries your distribution's repositories to install programs.
+
+This library of programs can be further expanded by adding additional repositories
+There are various ways software can be distributed on Linux, however, the various methods to install a software 
+
+### Various Ways To Install A Program
