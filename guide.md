@@ -2,7 +2,7 @@
 title: Guide
 description: 
 published: true
-date: 2021-12-21T18:47:30.304Z
+date: 2021-12-21T19:12:21.529Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-17T16:14:46.992Z
@@ -64,12 +64,14 @@ Broadly speaking, software can be installed in 2 ways- by installing "Binaries" 
 
 When you compile from source, you essentially take the various instructions involved (which may include but not limited to scripts, configuration files, etc) and "Build" your program using the various "blueprints" and "schematics" provided. Think of it as building your own PC, car, etc from scratch.
 
-A few of the most common builders include `meson`, `ninja`, `cmake`, etc
+A few of the most common build systems include Meson, CMake, and GNU Make.
 
 Generally, this method is used if an executable is not provided by the developer, or if you have applied some custom changes to the software which is otherwise not available to download directly. 
 
-> TL;DR: This is generally for advanced users.
+> This is generally for advanced users and developers. You should try to find a packaged version of the software you want and only use this as a last resort if your required software is not packaged for your system, or the current package version does not satisfy your requirements. 
 {.is-info}
+
+Most software will come with documentation and instructions on how to manually build it from source, please refer to said documentation or ask the author of that software for instructions on building it.
 
 
 ### Binaries
@@ -90,7 +92,7 @@ The most common way to install programs on Linux is by using your **package mana
 
 The package manager, as the name suggests, manages the packages installed on your system. These often include dependencies, weak dependencies and the program itself.
 
-Examples of other non-Linux package managers include Windows' modern (Windows 8+) apps, iOS apps, Android's APK, the Python Package Index, and Homebrew for macOS.
+Examples of other non-Linux package managers include Windows' modern (Windows 8+) apps, iOS apps, Android's APK, `pip` for Python libraries, NPM for Node.js libraries, and Homebrew for macOS.
 
 > Dependencies are the programs required by the software in order to function properly, these are generally installed when you are installing a package.
 {.is-info}
@@ -105,17 +107,20 @@ There are various ways software can be distributed on Linux, however, the variou
 {.is-info}
 
 
+### Software Repositories
+Repositories are a place where one can find a list of software they can install, an app store is a modern example of a software repository.
+
 ### Various Ways To Install An Executable In Linux
 
 Linux comes with a plethora of ways to install an executable.
 
-Broadly speaking, they can be either "contained", or use your system's pre-installed dependencies.
+Broadly speaking, they can be either "sandboxed", or use your system's pre-installed dependencies.
 
 In our case, the latter one is in the form of `.rpm` files.
 
 #### RPMs
 
-RPM Stands originally stood for Redhat Package Manager, however, it is now used as a recurse acronym.
+RPM Stands originally stood for the Red Hat Package Manager, however, it is now a recursive acronym.
 
 This is generally what is in the main repositories of our linux distribution.
 
@@ -123,12 +128,12 @@ These programs rely on your system's pre-installed dependencies.
 
 Experience using these executables is highly customizable and generally can be tuned to your heart's content
 
-> In order to actually modify the code, you will be needed SRPMs (abbreviated as Source RPMs), these will not be discussed in this guide as it lies beyond the scope of this guide. Please refer to other sources for further information on this topic.
+> In order to actually modify the code, you will need SRPMs (short for source RPMs). These will not be discussed in this guide as it lies beyond the scope of this guide. Please refer to the [Packaging Guide](/guide/contributing/building) for more information on building packages.
 {.is-info}
 
-These files are ubiquitous and easy to find for a given program.
+These files are ubiquitous and easy to find for a given program, unless the package itself is proprietary software.
 
-These programs do follow your system's theme integration and related customization settings
+These programs will (most of the time) respect your system theme and configuration.
 
 #### AppImages
 
@@ -136,6 +141,10 @@ These programs do follow your system's theme integration and related customizati
 
 > Superuser, `sudo` previliges, or Root privilieges are the highest order of access a program can have access to. This is analogous to Adminstrator privileges on Windows, this also applies on other UNIX-based Operating systems such as macOS.
 {.is-info}
+
+> It is **_NEVER_** recommended for a user to ever use the root user as their main account. As the root user will have unrestricted privilieges over everything on the system. This is a major security risk and most software will try to stop you from running them as root anyway.
+{.is-warning}
+
 
 
 
