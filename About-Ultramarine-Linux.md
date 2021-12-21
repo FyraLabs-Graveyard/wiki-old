@@ -2,7 +2,7 @@
 title: What You Need To Know About Ultramarine Linux
 description: Discusses various proprerties of UML, including defaults OOTB, behavioural restrictions, etc
 published: true
-date: 2021-12-20T18:31:23.543Z
+date: 2021-12-21T11:55:07.624Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-20T18:31:23.543Z
@@ -24,4 +24,16 @@ dateCreated: 2021-12-20T18:31:23.543Z
 
 # What Ultramarine Linux Ships By Default
 
+As of Version 22.04, Rhode Island, these are the versions of the most commonly interacted packages
 
+1. `Gnome Version` 41.2
+
+2. `gnome-terminal` 3.41.2
+
+3. `firewall-config` 1.0.1
+
+4. `gedit` 41.alpha
+
+5. `firefox` 95.0
+
+6. `Libre Office Suite` 7.2.4.1
