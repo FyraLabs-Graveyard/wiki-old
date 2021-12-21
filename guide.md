@@ -2,7 +2,7 @@
 title: Guide
 description: 
 published: true
-date: 2021-12-21T12:55:38.758Z
+date: 2021-12-21T13:06:45.389Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-17T16:14:46.992Z
@@ -115,13 +115,24 @@ In our case, the latter one is in the form of `.rpm` files.
 
 RPM Stands originally stood for Redhat Package Manager, however, it is now used as a recurse acronym.
 
-This is generally what is in the main repositories of a linux distribution.
+This is generally what is in the main repositories of our linux distribution.
 
 These programs rely on your system's pre-installed dependencies.
 
 Experience using these executables is highly customizable and generally can be tuned to your heart's content
 
-> In order to actually modify the code, you will be needed SRPMs (abbreviated as Source RPMs), these will not be discussed in this guide as it lies out of scope of this wiki.
+> In order to actually modify the code, you will be needed SRPMs (abbreviated as Source RPMs), these will not be discussed in this guide as it lies beyond the scope of this guide. Please refer to other sources for further information on this topic.
+{.is-info}
+
+These files are ubiquitous and easy to find for a given program.
+
+These programs do follow your system's theme integration and related customization settings
+
+#### AppImages
+
+>AppImages are a format for distributing portable software on linux without needing superuser permissions to install the application. Source: Wikipedia
+
+> Super User, aka Sudo privileges, aka Root are the highest order of access a program can have access to. This is analogous to Adminstrator privileges on Windows and root user on OS X
 {.is-info}
 
 
