@@ -2,7 +2,7 @@
 title: Guide
 description: 
 published: true
-date: 2021-12-21T12:27:03.962Z
+date: 2021-12-21T12:34:45.077Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-17T16:14:46.992Z
@@ -78,6 +78,10 @@ Binaries, however, are ready-to-use and pre-compiled, meaning you can simply exe
 
 This is analogous to running a `.exe` file for Windows or a `.dmg` file for OS X.
 
+> Ultramarine Linux is a RPM-Based distribution, meaning you can run`.rpm` files. Generally, everything based on Debian (or rather Ubuntu) is Deb-Based, meaning they run `.deb` programs. Do not run `.deb` packages in Ultramarine Linux.
+{.is-info}
+
+
 Various ways to install a specific program are discussed further below.
 
 The most common way to install programs on Linux is by using your **package manager**.
@@ -95,4 +99,16 @@ A package manager by default queries your distribution's repositories to install
 This library of programs can be further expanded by adding additional repositories
 There are various ways software can be distributed on Linux, however, the various methods to install a software 
 
-### Various Ways To Install A Program
+> Ultramarine Linux' package manager is `dnf`
+{.is-info}
+
+
+### Various Ways To Install An Executable In Linux
+
+Linux comes with a plethora of ways to install an executable
+
+Broadly speaking, they can be either "contained", or use your system's pre-installed dependencies.
+
+#### 
+
+
