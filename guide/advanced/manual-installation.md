@@ -2,7 +2,7 @@
 title: Manually Installing Ultramarine
 description: 
 published: true
-date: 2021-12-22T03:58:41.423Z
+date: 2021-12-22T04:29:56.569Z
 tags: advanced, install
 editor: markdown
 dateCreated: 2021-12-19T08:22:12.381Z
