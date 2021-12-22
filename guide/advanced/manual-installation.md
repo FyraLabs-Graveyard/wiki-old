@@ -2,7 +2,7 @@
 title: Manually Installing Ultramarine
 description: 
 published: true
-date: 2021-12-21T19:16:56.147Z
+date: 2021-12-22T03:58:41.423Z
 tags: advanced, install
 editor: markdown
 dateCreated: 2021-12-19T08:22:12.381Z
@@ -95,7 +95,7 @@ If you're using EFI, set up an EFI partition now.
 If you're sure you'll be wiping the entire disk and using a singular root partition, you can skip this part and use DNFStrap's built in auto partitioning and setup by cloning the repository and running:
 
 ```plaintext
-git clone https://gitlab.ultramarine-linux.org/extras/dnfstrap.git && cd dnfstrap && sudo ./dnfstrap -r 35 -d /dev/sda -i ultramarine-release-basic -i -fedora-release*
+git clone https://gitlab.ultramarine-linux.org/extras/dnfstrap.git && cd dnfstrap && sudo ./dnfstrap -r 35 -d /dev/sda -i ultramarine-release-basic
 ```
 
 This will install Ultramarine with a F35 base and automatically format your disk with an EFI partition.
