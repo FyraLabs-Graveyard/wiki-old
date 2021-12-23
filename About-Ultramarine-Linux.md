@@ -2,7 +2,7 @@
 title: What You Need To Know About Ultramarine Linux
 description: Discusses various proprerties of UML, including defaults OOTB, behavioural restrictions, etc
 published: true
-date: 2021-12-23T06:39:49.240Z
+date: 2021-12-23T06:41:58.743Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-20T18:31:23.543Z
