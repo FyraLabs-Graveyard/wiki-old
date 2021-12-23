@@ -2,7 +2,7 @@
 title: Ultramarine Linux Wiki
 description: Welcome to the Ultramarine Linux Wiki!
 published: true
-date: 2021-12-17T16:17:25.113Z
+date: 2021-12-23T06:23:31.946Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-17T14:50:20.849Z
@@ -38,3 +38,12 @@ Our aim is to lower the barrier of entry for desktop Linux. Although this may se
 - Encourage a speedy and efficient environment for most general computing related tasks, which may include gaming, productivity, etc.
 - Provide a simple way for contributors to contribute to the project
 - Let the user install any software they wish, regardless of license or origin. Unless the distribution of said software in itself is in violation of local laws
+
+
+# The team
+The main Ultramarine Linux development team is as follows:
+- 🇹🇭 Cappy Ishihara (Anonymous) - Project lead, Release Engineer
+- 🇮🇳 Vihag Chaturvedi - Community Manager, Documentation
+- 🇦🇹 Trobonox (Anonymous) - Design SIG, Web Designer
+- 🇮🇩 Mo (Anonymous) - Additional Support, Consulting
+- 🇵🇱 Toru Ishikawa (Anonymous) - Infrastructure SIG
