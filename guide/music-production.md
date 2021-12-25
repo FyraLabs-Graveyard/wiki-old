@@ -2,7 +2,7 @@
 title: Music Production on Ultramarine Linux
 description: 
 published: true
-date: 2021-12-25T09:16:59.153Z
+date: 2021-12-25T09:22:17.061Z
 tags: use case, hardware, software
 editor: markdown
 dateCreated: 2021-12-25T09:16:59.153Z
@@ -53,6 +53,8 @@ If you simply want the Fedora Jam packages (for native Linux audio production), 
 ```
 sudo dnf group install "Audio Production"
 ```
+
+You can also use the [Audinux](https://copr.fedorainfracloud.org/coprs/ycollet/audinux) repository for even more audio software.
 
 After setting up these packages, reboot your computer and continue with the following guides as you see fit.
 
