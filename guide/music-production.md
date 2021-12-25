@@ -2,14 +2,14 @@
 title: Music Production
 description: 
 published: true
-date: 2021-12-25T09:26:53.840Z
+date: 2021-12-25T09:28:09.334Z
 tags: use case, hardware, software
 editor: markdown
 dateCreated: 2021-12-25T09:16:59.153Z
 ---
 
 # Music Production / General Audio
-Ultramarine Linux can be quickly set up as a Digital Audio Workstation (DAW) for Music Production or any general audio editing use case. While the resulting setup may not be up to industry standards, it can be generally used to to basic (and some advanced) Audio Engineering tasks.
+Ultramarine Linux can be quickly set up as a Digital Audio Workstation (DAW) for Music Production or any general audio editing use case. While the resulting setup may not be up to industry standards, it can be generally used to do basic (and some advanced) Audio Engineering tasks.
 
 
 ## Disclaimer
