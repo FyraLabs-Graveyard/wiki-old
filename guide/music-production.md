@@ -1,8 +1,8 @@
 ---
-title: Music Production on Ultramarine Linux
+title: Music Production
 description: 
 published: true
-date: 2021-12-25T09:26:18.658Z
+date: 2021-12-25T09:26:53.840Z
 tags: use case, hardware, software
 editor: markdown
 dateCreated: 2021-12-25T09:16:59.153Z
