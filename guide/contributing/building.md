@@ -2,7 +2,7 @@
 title: Building Packages
 description: 
 published: true
-date: 2022-01-10T11:09:45.543Z
+date: 2022-01-10T11:10:16.807Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-17T16:34:23.741Z
@@ -12,7 +12,7 @@ dateCreated: 2021-12-17T16:34:23.741Z
 
 To build packages for Ultramarine, you should use the `umpkg` tool from the repos, or manually install the tool as a Python package.
 
-For more inquiries, please ask on the `#dev` channel on the Ultramarine Discord server.
+For more inquiries, please ask on the development channels on Ultramarine Linux's Discord, Matrix, or Mattermost.
 
 ## Authenticating to the Build System
 Before you can build packages, you need to properly set up your Koji client to use the Ultramarine servers.
