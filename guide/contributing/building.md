@@ -2,7 +2,7 @@
 title: Building Packages
 description: 
 published: true
-date: 2021-12-17T16:34:30.328Z
+date: 2022-01-10T11:09:15.466Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-17T16:34:23.741Z
@@ -105,9 +105,9 @@ Note: `umpkg` will use the main Koji profile for now, this will be fixed in the 
 ## Using `umpkg` to build packages
 Ultramarine, like Fedora, uses the RPM package manager for package management. To start building packages, you should start by referring to the [RPM Packaging Guide](https://rpm-packaging-guide.github.io/).
 
-To build an existing package, clone the repo from the dist-pkgs group, and run `umpkg build <tag>`. This will automatically build the package and push the SRPM to the Koji build system.
+To build an existing package, clone the repo from Gitlab by running `umpkg get <package path in dist-pkgs group`, then build the package by going inside the directory and running `umpkg build <package>`
 
-You can also build locally by running `umpkg build <tag> --local`. This will build the package locally, but not push it to the Koji build system.
+To push the package onto Ultramarine's build system, run `umpkg push <Koji Tag> <package>`
 
 `umpkg` is a collection of tools for building and maintaining packages for Ultramarine, similar to `fedpkg`.
 
