@@ -2,7 +2,7 @@
 title: Ultramarine Infrastructure Overview
 description: 
 published: true
-date: 2022-01-14T07:39:36.299Z
+date: 2022-01-14T07:51:07.095Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-01-14T07:34:29.295Z
@@ -28,7 +28,7 @@ dateCreated: 2022-01-14T07:34:29.295Z
     <tbody>
       <tr>
         <td>Andes</td>
-        <td>lapis.ultramarine-linux.org</td>
+        <td><code>lapis.ultramarine-linux.org</code></td>
         <td>
           <ul>
             <li>Koji (Build System)</li>
@@ -48,7 +48,7 @@ dateCreated: 2022-01-14T07:34:29.295Z
       </tr>
       <tr>
         <td>Long Island</td>
-        <td>auth.ultramarine-linux.org</td>
+        <td><code>auth.ultramarine-linux.org</code></td>
         <td>
           <ul>
             <li>FreeIPA + FAS (Authentication)</li>
@@ -69,7 +69,7 @@ dateCreated: 2022-01-14T07:34:29.295Z
       </tr>
       <tr>
         <td>Iwo Jima</td>
-        <td>ultramarine-linux.org</td>
+        <td><code>ultramarine-linux.org</code></td>
         <td>
           <ul>
             <li>NGINX (Web Hosting)</li>
@@ -86,7 +86,7 @@ dateCreated: 2022-01-14T07:34:29.295Z
       </tr>
       <tr>
         <td>KotVPS</td>
-        <td>gitlab.ultramarine-linux.org</td>
+        <td><code>gitlab.ultramarine-linux.org</code></td>
         <td>
           <ul>
             <li>GitLab</li>
@@ -103,3 +103,11 @@ dateCreated: 2022-01-14T07:34:29.295Z
     </tbody>
   </table>
 </figure>
+<h1>Authentication</h1>
+<p>To start contributing to Ultramarine Linux, you need to sign up for an Ultramarine account. You can do this by going into Noggin's login portal at <code>accounts.ultramarine-linux.org</code>.</p>
+<p>This account should and will integrate with all other services for Ultramarine Linux.</p>
+<p>The Ultramarine accounts system uses FreeIPA, LDAP and Kerberos for authentication. Which means that you will need a Kerberos principal to interact with the system. However this will be automatically managed by FreeIPA, so you do not need to worry much.</p>
+<h2>Kerberos Authentication</h2>
+<p>To log in to Ultramarine's Kerberos realm, simply run <code>kinit &lt;username&gt;@ULTRAMARINE-LINUX.ORG</code>. Or if you're using GNOME or Budgie, go to your system settings app, then go to <strong>Online Accounts &gt; Enterprise Login (Kerberos)</strong></p>
+<hr>
+<p>&nbsp;</p>
