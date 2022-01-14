@@ -1,0 +1,106 @@
+<!--
+title: Ultramarine Infrastructure Overview
+description: 
+published: true
+date: 2022-01-14T07:34:29.295Z
+tags: 
+editor: ckeditor
+dateCreated: 2022-01-14T07:34:29.295Z
+-->
+
+<h1>Ultramarine Infrastructure</h1>
+<p>To maintain Ultramarine code, we needed an infrastructure to maintain our own code and quickly integrate with upstream Fedora.</p>
+<p>Ultramarine uses a similar infra stack to Fedora's, with a few differences. This article will go over the Ultramarine development stack and how we use it.</p>
+<p>&nbsp;</p>
+<h1>Overview</h1>
+<p>As the time of writing this, the Ultramarine infrastructure runs on 4 seperate cloud servers, each doing different tasks.</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th>Codename</th>
+        <th>Public Domain</th>
+        <th>Stack</th>
+        <th>Operating System</th>
+        <th>Purpose</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Andes</td>
+        <td>lapis.ultramarine-linux.org</td>
+        <td>
+          <ul>
+            <li>Koji (Build System)</li>
+            <li>Grafana + Loki (Monitoring)</li>
+            <li>Apache HTTPd (Koji and Repository hosting)</li>
+            <li>RabbitMQ (Cross-server messaging. Set up here due to conflict with FreeIPA)</li>
+          </ul>
+        </td>
+        <td>Fedora Server</td>
+        <td>
+          <ul>
+            <li>Main Development Server</li>
+            <li>Monitoring</li>
+            <li>Build System</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Long Island</td>
+        <td>auth.ultramarine-linux.org</td>
+        <td>
+          <ul>
+            <li>FreeIPA + FAS (Authentication)</li>
+            <li>Noggin (Account self-service)</li>
+            <li>Matterbridge (Chat Bridging)</li>
+            <li>Koji Builder</li>
+          </ul>
+        </td>
+        <td>Fedora Server</td>
+        <td>
+          <ul>
+            <li>Authentication</li>
+            <li>Worker node</li>
+            <li>Communications</li>
+            <li>Long-term Storage</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Iwo Jima</td>
+        <td>ultramarine-linux.org</td>
+        <td>
+          <ul>
+            <li>NGINX (Web Hosting)</li>
+            <li>Prometheus (Metrics)</li>
+          </ul>
+        </td>
+        <td>Debian</td>
+        <td>
+          <ul>
+            <li>Web Hosting</li>
+            <li>Monitoring host data from all the other servers</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>KotVPS</td>
+        <td>gitlab.ultramarine-linux.org</td>
+        <td>
+          <ul>
+            <li>GitLab</li>
+          </ul>
+        </td>
+        <td>Ubuntu</td>
+        <td>
+          <ul>
+            <li>Code maintenance</li>
+            <li>Source code archival</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
