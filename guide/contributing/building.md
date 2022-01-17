@@ -2,7 +2,7 @@
 title: Building Packages
 description: 
 published: true
-date: 2022-01-10T11:10:16.807Z
+date: 2022-01-17T02:16:55.596Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-17T16:34:23.741Z
@@ -60,7 +60,7 @@ authtype = kerberos
 krb_rdns = false
 
 ;the principal to auth as for automated clients
-;principal = user@ULTRAMARINE-LINUX.ORG
+principal = <user>@ULTRAMARINE-LINUX.ORG
 
 ;the keytab to auth as for automated clients
 ;keytab = /etc/krb5.keytab
