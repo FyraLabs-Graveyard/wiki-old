@@ -2,7 +2,7 @@
 title: Building Packages
 description: 
 published: true
-date: 2022-01-17T02:19:44.513Z
+date: 2022-01-17T02:33:05.542Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-17T16:34:23.741Z
@@ -104,6 +104,28 @@ Note: `umpkg` will use the main Koji profile for now, this will be fixed in the 
 
 ## Using `umpkg` to build packages
 Ultramarine, like Fedora, uses the RPM package manager for package management. To start building packages, you should start by referring to the [RPM Packaging Guide](https://rpm-packaging-guide.github.io/).
+
+### Installing umpkg
+> TODO: Package `umpkg` properly so developers will not need to set this up
+{.is-info}
+
+To install umpkg (at the moment), you will need to install the standard RPM building tools.
+You can do this automatically by downloading the Fedora packaging scripts:
+```
+sudo dnf install fedora-packager
+```
+It is currently recommended to use the testing branch of Ultramarine for building packages. Or you will have to manually download the new custom Mock configurations from the testing branch repositories.
+
+After you have installed Fedora packaging tools for dependencies, download and install umpkg from [the GitLab repository](https://gitlab.ultramarine-linux.org/release-engineering/umpkg).
+
+```
+git clone https://gitlab.ultramarine-linux.org/release-engineering/umpkg.git && cd umpkg
+sudo python setup.py
+```
+
+
+---
+
 
 To build an existing package, clone the repo from Gitlab by running `umpkg get <package path in dist-pkgs group`, then build the package by going inside the directory and running `umpkg build <package>`
 
