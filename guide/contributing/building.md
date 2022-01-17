@@ -2,7 +2,7 @@
 title: Building Packages
 description: 
 published: true
-date: 2022-01-17T07:36:34.600Z
+date: 2022-01-17T11:29:59.545Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-17T16:34:23.741Z
@@ -131,7 +131,9 @@ sudo python setup.py install
 
 To build an existing package, clone the repo from Gitlab by running `umpkg get <package path in dist-pkgs group`, then build the package by going inside the directory and running `umpkg build <package>`
 
-To push the package onto Ultramarine's build system, run `umpkg push <Koji Tag> <package>`
+To push the package onto Ultramarine's build system, run `umpkg push <target>`
+
+If you want to push a specific branch onto the tag, then you can use `umpkg push <target> --branch <branch>`
 
 `umpkg` is a collection of tools for building and maintaining packages for Ultramarine, similar to `fedpkg`.
 
