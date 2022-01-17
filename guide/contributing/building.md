@@ -2,7 +2,7 @@
 title: Building Packages
 description: 
 published: true
-date: 2022-01-17T07:34:49.009Z
+date: 2022-01-17T07:36:34.600Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-17T16:34:23.741Z
@@ -98,7 +98,9 @@ use_fast_upload = yes
 
 Or add the above config as a seperate profile for Koji and replace `[koji]` with `[ultramarine]`, then put the file in `/etc/koji.conf.d/` or `~/.koji/conf.d/`.
 
-This will be automatically resolved later once we properly package `umpkg`.
+> This will be automatically resolved later once we properly package `umpkg`.
+{.is-info}
+
 
 Note: `umpkg` will use the main Koji profile for now, this will be fixed in the future, if you want to use the Ultramarine profile separately, you can use the Koji CLI directly with the `--profile` option.
 
