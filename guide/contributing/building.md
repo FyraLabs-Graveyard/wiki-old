@@ -2,7 +2,7 @@
 title: Building Packages
 description: 
 published: true
-date: 2022-01-17T02:33:05.542Z
+date: 2022-01-17T07:34:49.009Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-17T16:34:23.741Z
@@ -120,7 +120,7 @@ After you have installed Fedora packaging tools for dependencies, download and i
 
 ```
 git clone https://gitlab.ultramarine-linux.org/release-engineering/umpkg.git && cd umpkg
-sudo python setup.py
+sudo python setup.py install
 ```
 
 
