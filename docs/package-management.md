@@ -2,7 +2,7 @@
 title: Managing Software
 description: 
 published: true
-date: 2022-02-08T01:36:18.096Z
+date: 2022-02-08T01:38:07.455Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-08T01:06:13.442Z
@@ -35,4 +35,4 @@ Flatpak is a distribution-agnostic package management solution. Its packages are
 AppImages are an another form of distro-agnostic packages. Its package are served in a single binary which means that the end user does not need to install anything else to use the software.
 
 ## Snaps
-Snap is a sandboxed package solution by Canonical. They are similar to Flatpaks, but currently only has 1 centralized repository from Snapcraft.
+Snap is a sandboxed package solution by Canonical. They are similar to Flatpaks, but currently only has 1 centralized repository from Snapcraft. It is the secondary package manager for Ubuntu.
