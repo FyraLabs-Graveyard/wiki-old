@@ -2,7 +2,7 @@
 title: Managing Software
 description: 
 published: true
-date: 2022-02-08T01:25:02.428Z
+date: 2022-02-08T01:36:18.096Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-08T01:06:13.442Z
@@ -28,3 +28,11 @@ Ultramarine Linux mainly uses the DNF Package Manager. Which in turn relies upon
 - iOS uses IPA packages to install apps.
 - Windows has their own version of packages in the form of MSI installers and UWP Apps/AppX packages.
 
+## Flatpaks
+Flatpak is a distribution-agnostic package management solution. Its packages are fully sandboxed and require permissions to proceed.
+
+## AppImages
+AppImages are an another form of distro-agnostic packages. Its package are served in a single binary which means that the end user does not need to install anything else to use the software.
+
+## Snaps
+Snap is a sandboxed package solution by Canonical. They are similar to Flatpaks, but currently only has 1 centralized repository from Snapcraft.
