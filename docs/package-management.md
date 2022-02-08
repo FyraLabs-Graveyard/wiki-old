@@ -2,7 +2,7 @@
 title: Managing Software
 description: 
 published: true
-date: 2022-02-08T01:38:07.455Z
+date: 2022-02-08T01:48:45.147Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-08T01:06:13.442Z
@@ -36,3 +36,13 @@ AppImages are an another form of distro-agnostic packages. Its package are serve
 
 ## Snaps
 Snap is a sandboxed package solution by Canonical. They are similar to Flatpaks, but currently only has 1 centralized repository from Snapcraft. It is the secondary package manager for Ubuntu.
+
+# Installing Packages in Ultramarine Linux
+
+Ultramarine Linux comes with DNF as its primary package manager and Flatpak as a secondary one.
+
+To install a native RPM package, simply run `sudo dnf install` and specify the name/path to your package.
+
+To install a Flatpak, run `flatpak install` then specify the App ID.
+
+You can also use GNOME Software to manage both Flatpaks and RPM packages. 
