@@ -2,7 +2,7 @@
 title: Ultramarine Linux Wiki
 description: ยินดีต้อนรับเข้าสู่ Ultramarine Linux Wiki!
 published: true
-date: 2022-02-08T15:45:17.288Z
+date: 2022-02-09T00:38:43.029Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-08T15:44:20.536Z
@@ -43,8 +43,8 @@ Ultramarine Linux เป็นดิสทริบิวชันลินุ�
 
 # ทีมงาน
 ทีมพัฒนา Ultramarine Linux หลักมีดังนี้:
-- 🇹🇭 Cappy Ishihara (Anonymous) - หัวหน้าโครงการ, วิศวกรปลดปล่อยซอฟท์แวร์
+- 🇹🇭 Cappy Ishihara (นิรนาม) - หัวหน้าโครงการ, วิศวกรปลดปล่อยซอฟท์แวร์
 - 🇮🇳 Vihag Chaturvedi - ผู้จัดการชุมชน, เอกสาร
-- 🇦🇹 Trobonox (Anonymous) - ออกแบบเฉพาะกิจ, นักออกแบบเว็บไซต์
-- 🇮🇩 Mo (Anonymous) - การสนับสนุนเพิ่มเติม, ให้คำปรึกษา
-- 🇵🇱 Toru Ishikawa (Anonymous) - กลุ่มเฉพาะกิจการจัดการระบบ
+- 🇦🇹 Trobonox (นิรนาม) - ออกแบบเฉพาะกิจ, นักออกแบบเว็บไซต์
+- 🇮🇩 Mo (นิรนาม) - การสนับสนุนเพิ่มเติม, ให้คำปรึกษา
+- 🇵🇱 Toru Ishikawa (นิรนาม) - กลุ่มเฉพาะกิจการจัดการระบบ
