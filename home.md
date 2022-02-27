@@ -2,7 +2,7 @@
 title: Ultramarine Linux Wiki
 description: Welcome to the Ultramarine Linux Wiki!
 published: true
-date: 2021-12-23T06:23:43.893Z
+date: 2022-02-27T18:34:19.670Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-17T14:50:20.849Z
@@ -44,6 +44,6 @@ Our aim is to lower the barrier of entry for desktop Linux. Although this may se
 The main Ultramarine Linux development team is as follows:
 - 🇹🇭 Cappy Ishihara (Anonymous) - Project lead, Release Engineer
 - 🇮🇳 Vihag Chaturvedi - Community Manager, Documentation
-- 🇦🇹 Trobonox (Anonymous) - Design SIG, Web Designer
+- 🇩🇪 Trobonox (Anonymous) - Design SIG, Web Designer
 - 🇮🇩 Mo (Anonymous) - Additional Support, Consulting
 - 🇵🇱 Toru Ishikawa (Anonymous) - Infrastructure SIG
