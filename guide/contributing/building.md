@@ -2,7 +2,7 @@
 title: Building Packages
 description: 
 published: true
-date: 2022-01-17T11:31:25.628Z
+date: 2022-03-05T12:24:11.363Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-17T16:34:23.741Z
@@ -11,6 +11,8 @@ dateCreated: 2021-12-17T16:34:23.741Z
 # Building packages for Ultramarine
 
 To build packages for Ultramarine, you should use the `umpkg` tool from the repos, or manually install the tool as a Python package.
+
+You will also need to sign up for an Ultramarine account by going [here](https://accounts.ultramarine-linux.org/).
 
 For more inquiries, please ask on the development channels on Ultramarine Linux's Discord, Matrix, or Mattermost.
 
