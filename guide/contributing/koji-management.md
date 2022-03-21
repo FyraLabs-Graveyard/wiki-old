@@ -2,7 +2,7 @@
 title: Koji Management
 description: 
 published: true
-date: 2022-03-21T14:15:02.109Z
+date: 2022-03-21T14:33:02.984Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-21T14:15:02.109Z
@@ -30,6 +30,9 @@ koji add-pkg --owner <username of owner> <package> um36-build
 ```
 
 # SOP for branching a new release
+> After the final release, make sure you create a new updates tag with the original tag as the parent, then change the build target tag to the updates tag
+{.is-info}
+
 Create a new dist tag
 ```
 koji add-tag um37
@@ -72,4 +75,3 @@ Then we can try to generate a repository for the build tag
 ```
 koji regen-repo um37-build
 ```
-
